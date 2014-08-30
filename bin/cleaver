@@ -17,7 +17,7 @@ function createAndSave(files, options) {
 
       presentation.run()
         .then(function (product) {
-          var outputFile = presentation.options.output || path.basename(file, '.md') + '-cleaver.html';
+          var outputFile = presentation.options.output || path.basename(file, '.md') + '.html';
           fs.writeFile(outputFile, product);
         })
         .fail(function (err) {
